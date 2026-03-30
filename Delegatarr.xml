@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Delegatarr</Name>
+  <Repository>krimlocke/delegatarr:latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/krimlocke/delegatarr</Project>
+  <ReadMe/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:5555]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/Krimlocke/delegatarr/refs/heads/main/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1774857942</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="5555" Default="5555" Mode="tcp" Description="The port used to access the Delegatarr web dashboard from your browser." Type="Port" Display="always" Required="true" Mask="false">5555</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/delegate/config/" Mode="rw" Description="The storage path where Delegatarr saves the tracker tags, removal rules, and app settings." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/delegatarr/config/</Config>
+  <Config Name="Deluge Auth File" Target="/config/deluge_auth" Default="" Mode="ro" Description="A secure, read-only bridge that lets Delegatarr look inside the Deluge folder to automatically grab the Deluge username and password." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/binhex-delugevpn/auth</Config>
+  <Config Name="Deluge IP" Target="DELUGE_HOST" Default="" Mode="" Description="The local IP address of the server where your Deluge container is currently running." Type="Variable" Display="always" Required="true" Mask="false">192.168.0.1</Config>
+  <Config Name="Deluge Port" Target="DELUGE_PORT" Default="58846" Mode="" Description="The internal Deluge Daemon port used for backend communication (RPC). This is typically 58846, NOT the port used to access the Deluge web interface." Type="Variable" Display="always" Required="true" Mask="false">58846</Config>
+  <Config Name="Auth File Location" Target="DELUGE_AUTH_FILE" Default="/config/deluge_auth" Mode="" Description="Tells Delegatarr where to look inside its own container for the linked auth file." Type="Variable" Display="always" Required="true" Mask="false">/config/deluge_auth</Config>
+  <TailscaleStateDir/>
+</Container>
