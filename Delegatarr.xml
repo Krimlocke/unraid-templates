@@ -14,7 +14,7 @@
   <Category/>
   <WebUI>http://[IP]:[PORT:5555]</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/Krimlocke/delegatarr/refs/heads/main/logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/Krimlocke/delegatarr/main/logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
