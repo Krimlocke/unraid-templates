@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/198023-support-delegatarr-deluge-torrent-manager/</Support>
   <Project>https://github.com/krimlocke/delegatarr</Project>
   <ReadMe/>
   <Overview/>
