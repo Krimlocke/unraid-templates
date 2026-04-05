@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Delegatarr-beta</Name>
+  <Name>Delegatarr</Name>
   <Repository>krimlocke/delegatarr:latest</Repository>
   <Registry>https://registry.hub.docker.com/r/krimlocke/delegatarr/</Registry>
   <Network>bridge</Network>
@@ -18,7 +18,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1775288182</DateInstalled>
+  <DateInstalled/>
   <DonateText/>
   <DonateLink/>
   <Requires/>
