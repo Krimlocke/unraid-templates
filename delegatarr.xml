@@ -13,7 +13,7 @@
   <Overview/>
   <Category/>
   <WebUI>http://[IP]:[PORT:5555]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/sonarr.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/Krimlocke/unraid-templates/main/delegatarr.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/Krimlocke/delegatarr/main/logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
