@@ -10,7 +10,7 @@
   <Support>https://forums.unraid.net/topic/198023-support-delegatarr-deluge-torrent-manager/</Support>
   <Project/>
   <ReadMe/>
-  <Overview/>
+  <Overview>Delegatarr is an automated background service for the Deluge BitTorrent client that effortlessly manages your storage and tracker requirements by automatically removing torrents based on highly customizable rules. By continuously evaluating your client against user-defined criteria—such as tracker domains, Deluge labels, seeding time elapsed, and specific seed ratios—it acts as a smart pruning engine that keeps your torrent list clean and your ratios healthy without requiring manual intervention.</Overview>
   <Category/>
   <WebUI>http://[IP]:[PORT:5555]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Krimlocke/unraid-templates/main/delegatarr.xml</TemplateURL>
