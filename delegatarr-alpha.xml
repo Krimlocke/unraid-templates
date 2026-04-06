@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>Delegatarr-alpha</Name>
   <Repository>krimlocke/delegatarr-alpha:latest</Repository>
-  <Registry>https://registry.hub.docker.com/r/krimlocke/delegatarr-alpha/</Registry>
+  <Registry>https://hub.docker.com/r/krimlocke/delegatarr-alpha/</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -10,11 +10,11 @@
   <Support>https://forums.unraid.net/topic/198023-support-delegatarr-deluge-torrent-manager/</Support>
   <Project/>
   <ReadMe/>
-  <Overview>Delegatarr (alpha, built on Go) is an automated background service for the Deluge BitTorrent client that effortlessly manages your storage and tracker requirements by automatically removing torrents based on highly customizable rules. By continuously evaluating your client against user-defined criteria—such as tracker domains, Deluge labels, seeding time elapsed, and specific seed ratios—it acts as a smart pruning engine that keeps your torrent list clean and your ratios healthy without requiring manual intervention.</Overview>
-  <Category/>
+  <Overview>Delegatarr Alpha (Go Edition) is an automated background service for Deluge that manages storage by automatically removing torrents based on customizable rules. It evaluates tracker domains, labels, seeding time, and ratios to keep your client clean. Note: This version connects via the Deluge WebUI API.</Overview>
+  <Category>Downloaders: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:5556]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Krimlocke/unraid-templates/main/delegatarr-alpha.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/Krimlocke/delegatarr/main/logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/Krimlocke/delegatarr-alpha/main/web/static/logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -22,11 +22,10 @@
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="WebUI" Target="5556" Default="5556" Mode="tcp" Description="The port used to access the Delegatarr web dashboard from your browser." Type="Port" Display="always" Required="true" Mask="false">5556</Config>
-  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/delegate/config/" Mode="rw" Description="The storage path where Delegatarr saves the tracker tags, removal rules, and app settings." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/delegatarr-alpha/config/</Config>
-  <Config Name="Deluge Auth File" Target="/config/deluge_auth" Default="" Mode="ro" Description="A secure, read-only bridge that lets Delegatarr look inside the Deluge folder to automatically grab the Deluge username and password." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/binhex-delugevpn/auth</Config>
-  <Config Name="Deluge IP" Target="DELUGE_HOST" Default="" Mode="" Description="The local IP address of the server where your Deluge container is currently running." Type="Variable" Display="always" Required="false" Mask="false">192.168.0.1</Config>
-  <Config Name="Deluge Port" Target="DELUGE_PORT" Default="58846" Mode="" Description="The internal Deluge Daemon port used for backend communication (RPC). This is typically 58846, NOT the port used to access the Deluge web interface." Type="Variable" Display="always" Required="false" Mask="false">58846</Config>
-  <Config Name="Auth File Location" Target="DELUGE_AUTH_FILE" Default="/config/deluge_auth" Mode="" Description="Tells Delegatarr where to look inside its own container for the linked auth file." Type="Variable" Display="always" Required="false" Mask="false">/config/deluge_auth</Config>
+  <Config Name="WebUI Port" Target="5556" Default="5556" Mode="tcp" Description="The port used to access the Delegatarr web dashboard." Type="Port" Display="always" Required="true" Mask="false">5556</Config>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/delegatarr-alpha/config/" Mode="rw" Description="Path where Delegatarr saves your rules and settings." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/delegatarr-alpha/config/</Config>
+  <Config Name="Deluge IP" Target="DELUGE_HOST" Default="" Mode="" Description="The local IP address of your Deluge container." Type="Variable" Display="always" Required="true" Mask="false">192.168.0.1</Config>
+  <Config Name="Deluge WebUI Port" Target="DELUGE_PORT" Default="8112" Mode="" Description="The port used to access your Deluge Web interface (usually 8112)." Type="Variable" Display="always" Required="true" Mask="false">8112</Config>
+  <Config Name="Deluge Password" Target="DELUGE_PASS" Default="" Mode="" Description="Your Deluge WebUI password." Type="Variable" Display="always" Required="true" Mask="true">deluge</Config>
   <TailscaleStateDir/>
 </Container>
